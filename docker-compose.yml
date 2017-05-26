@@ -27,6 +27,13 @@ services:
      - db
      - frontend
 
+  web:
+    image: clarenceho/docker-contact-web:1.0.0
+    ports:
+     - "9000:80"
+    networks:
+     - frontend
+
 networks:
   db:
     driver: overlay
